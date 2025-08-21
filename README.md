@@ -28,38 +28,47 @@ It follows **Clean Code principles** and provides essential e-commerce features 
 
 ---
 
+
+# 🛒 E-commerce API
+
+This project is a **Node.js** based e-commerce backend built with **Express** and **MongoDB (Mongoose)**.  
+The project follows **Clean Code principles** and implements essential features for scalable applications.
+
+---
+
+## 🚀 Features
+
+- ✅ **CRUD Operations** – Create, Read, Update, Delete for resources  
+- 🔍 **Filtering** – Query products with conditions (gte, lte, etc.)  
+- 📄 **Pagination** – Handle large datasets efficiently  
+- 📝 **Search** – Find products easily by keywords  
+- 🌲 **Nested Navigation** – Manage related data with nested routes  
+
+---
+
+## 🛠️ Tech Stack
+
+- [Node.js](https://nodejs.org/)  
+- [Express](https://expressjs.com/) (v5.1.0)  
+- [MongoDB + Mongoose](https://mongoosejs.com/) (v8.17.1)  
+- [dotenv](https://www.npmjs.com/package/dotenv) (v17.2.1) – Environment variables  
+- [morgan](https://www.npmjs.com/package/morgan) (v1.10.1) – Logging HTTP requests  
+- [slugify](https://www.npmjs.com/package/slugify) (v1.6.6) – URL-friendly slugs  
+- [express-async-handler](https://www.npmjs.com/package/express-async-handler) (v1.2.0) – Async error handling  
+- [express-validator](https://express-validator.github.io/) (v7.2.1) – Validation  
+- [colors](https://www.npmjs.com/package/colors) (v1.4.0) – Console log styling  
+
+---
+
 ## 📂 Project Structure
-ECOMERCE_API_V1/
-│── controllers/ # Controllers (Business logic for CRUD operations)
-│ └── subcategory_controller.js
-│
-│── middlewares/ # Custom middlewares (e.g., error handling, auth, filters)
-│
-│── models/ # Mongoose Models (Schema definitions)
-│ ├── brand_model.js
-│ ├── category_model.js
-│ ├── product_model.js
-│ └── subcategory_model.js
-│
-│── routes/ # Express Routes (API endpoints)
-│ ├── brand_routes.js
-│ ├── category_route.js
-│ ├── category_routes.js
-│ ├── product_route.js
-│ └── subcategory_routes.js
-│
-│── utils/ # Utilities & helpers
-│ ├── dummy_data/ # Seed or dummy data (if needed)
-│ ├── validators/ # Input validation (express-validator)
-│ │ ├── brand_validator.js
-│ │ ├── category_validator.js
-│ │ ├── product_validator.js
-│ │ └── subcategory_validator.js
-│ ├── api_error.js # Custom API error handler
-│ └── api_features.js # Filtering, sorting, pagination, search utilities
-│
-│── .gitignore
-│── config.env # Environment variables
-│── package.json
-│── package-lock.json
-│── server.js # Entry point
+
+```bash
+.
+├── config/           # Database & environment configs
+├── controllers/      # Business logic
+├── models/           # Mongoose models
+├── routes/           # API routes
+├── middlewares/      # Custom middlewares
+├── utils/            # Helper functions
+├── server.js         # Entry point
+└── README.md         # Documentation
