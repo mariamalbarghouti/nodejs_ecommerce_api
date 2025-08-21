@@ -29,3 +29,37 @@ It follows **Clean Code principles** and provides essential e-commerce features 
 ---
 
 ## 📂 Project Structure
+ECOMERCE_API_V1/
+│── controllers/ # Controllers (Business logic for CRUD operations)
+│ └── subcategory_controller.js
+│
+│── middlewares/ # Custom middlewares (e.g., error handling, auth, filters)
+│
+│── models/ # Mongoose Models (Schema definitions)
+│ ├── brand_model.js
+│ ├── category_model.js
+│ ├── product_model.js
+│ └── subcategory_model.js
+│
+│── routes/ # Express Routes (API endpoints)
+│ ├── brand_routes.js
+│ ├── category_route.js
+│ ├── category_routes.js
+│ ├── product_route.js
+│ └── subcategory_routes.js
+│
+│── utils/ # Utilities & helpers
+│ ├── dummy_data/ # Seed or dummy data (if needed)
+│ ├── validators/ # Input validation (express-validator)
+│ │ ├── brand_validator.js
+│ │ ├── category_validator.js
+│ │ ├── product_validator.js
+│ │ └── subcategory_validator.js
+│ ├── api_error.js # Custom API error handler
+│ └── api_features.js # Filtering, sorting, pagination, search utilities
+│
+│── .gitignore
+│── config.env # Environment variables
+│── package.json
+│── package-lock.json
+│── server.js # Entry point
