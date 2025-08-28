@@ -35,6 +35,10 @@ This project is a **Node.js** based e-commerce backend built with **Express** an
 The project follows **Clean Code principles** and implements essential features for scalable applications.
 
 ---
+# Multer Image Upload Middleware
+
+This module provides middleware for handling image uploads using **Multer**.
+---
 
 ## 🚀 Features
 
@@ -42,7 +46,15 @@ The project follows **Clean Code principles** and implements essential features 
 - 🔍 **Filtering** – Query products with conditions (gte, lte, etc.)  
 - 📄 **Pagination** – Handle large datasets efficiently  
 - 📝 **Search** – Find products easily by keywords  
-- 🌲 **Nested Navigation** – Manage related data with nested routes  
+- 🌲 **Nested Navigation** – Manage related data with nested routes
+- Uses **memory storage** (files stored in memory as Buffer).
+- Accepts only image files (`jpeg`, `png`, `gif`, etc.).
+- Provides two main functions:
+  - **`uploadSingleImage(fieldName)`** → Upload a single image.
+  - **`uploadMixOfImages(arrayOfFields)`** → Upload multiple images with different field names.
+- Authentication
+- Authorization
+- 
 
 ---
 
@@ -65,10 +77,12 @@ The project follows **Clean Code principles** and implements essential features 
 ```bash
 .
 ├── config/           # Database & environment configs
-├── controllers/      # Business logic
+├── controllers/      # Business logic (users, products, auth, etc.)
 ├── models/           # Mongoose models
 ├── routes/           # API routes
-├── middlewares/      # Custom middlewares
-├── utils/            # Helper functions
+├── middlewares/      # Multer, auth, error handling
+├── utils/            # Helper functions (e.g., ApiError, sendEmail)
+├── uploads/          # Uploaded images (processed with sharp)
 ├── server.js         # Entry point
 └── README.md         # Documentation
+
