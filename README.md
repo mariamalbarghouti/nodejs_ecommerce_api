@@ -23,7 +23,8 @@ This module provides middleware for handling image uploads using **Multer**.
   - **`uploadMixOfImages(arrayOfFields)`** → Upload multiple images with different field names.
 - ✅ Authentication
    - CURD operations
-   - Password confirmations
+   - Password confirmation
+   - Encrypt password
    - Sign up
    - Login
    - Forget password
