@@ -16,13 +16,22 @@ This module provides middleware for handling image uploads using **Multer**.
 - ✅ **Search** by title & description (case-insensitive)  
 - ✅ **Nested Navigation** (e.g., products by category)  
 - ✅ **Clean Code Architecture** for maintainability
-- - Uses **memory storage** (files stored in memory as Buffer).
-- Accepts only image files (`jpeg`, `png`, `gif`, etc.).
-- Provides two main functions:
+- ✅ Uses **memory storage** (files stored in memory as Buffer).
+     - Accepts only image files (`jpeg`, `png`, `gif`, etc.).
+- ✅ Provides two main functions:
   - **`uploadSingleImage(fieldName)`** → Upload a single image.
   - **`uploadMixOfImages(arrayOfFields)`** → Upload multiple images with different field names.
-- Authentication
-- Authorization
+- ✅ Authentication
+   - CURD operations
+   - Password confirmations
+   - Change password
+   - Sign up
+   - Login
+   - Forget password
+   - deactivation
+- ✅ Authorization
+  
+  
 
 
 ---
