@@ -26,6 +26,7 @@ This module provides middleware for handling image uploads using **Multer**.
    - Password confirmation
    - Encrypt password
    - Sign up
+   - Create token
    - Login
    - Forget password
  
