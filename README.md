@@ -24,12 +24,13 @@ This module provides middleware for handling image uploads using **Multer**.
 - ✅ Authentication
    - CURD operations
    - Password confirmations
-   - Change password
    - Sign up
    - Login
    - Forget password
-   - deactivation
+ 
 - ✅ Authorization
+    - deactivation
+    - Change password
   
   
 
