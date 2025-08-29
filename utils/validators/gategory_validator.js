@@ -6,7 +6,6 @@ exports.getCategoryByIdValidator = [
     check('id').isMongoId().withMessage('Invalid id formate'),
     validatorMiddleware,
 ];
-
 exports.createCategoryValidator = [
     check('name')
         .notEmpty()

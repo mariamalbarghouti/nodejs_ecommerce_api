@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+
+const {protect} = require('../middlewares/token_middleware.js');
+
 const { getCategoryByIdValidator,
     updateCategoryValidator,
     deleteCategoryValidator,
@@ -16,7 +19,7 @@ router.use('/:categoryId/subcategories', subCategoryRoutes);
 
 router.route('/')
     .get(getCategories)
-    .post(createCategoryValidator, createCategory);
+    .post(protect,createCategoryValidator, createCategory);
 
 router.route('/:id')
     .get(getCategoryByIdValidator, getCategoryById)

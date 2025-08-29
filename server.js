@@ -11,9 +11,13 @@ const globalErrorHandler = require('./middlewares/error_middleware');
 const subCategoryRoutes = require('./routes/subcategory_routes');
 const brandRoutes = require('./routes/brand_routes');
 const productRoutes = require('./routes/product_route');
+const userRoutes = require('./routes/user_route');
+const authRoutes = require('./routes/auth_route');
 // Express app
 const app = express();
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // Middleware
 if (process.env.NODE_ENV == 'development') {
     app.use(morgan('dev'));
@@ -24,6 +28,8 @@ app.use('/api/v1/categories', categoryRoutes);
 app.use('/api/v1/subcategories', subCategoryRoutes);
 app.use('/api/v1/brands', brandRoutes);
 app.use('/api/v1/products', productRoutes);
+app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/auth', authRoutes);
 
 app.use((req, res, next) => {
     next(new ApiError(`Can't find this route: ${req.originalUrl}`, 404));
