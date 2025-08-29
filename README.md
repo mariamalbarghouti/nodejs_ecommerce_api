@@ -21,6 +21,10 @@ This module provides middleware for handling image uploads using **Multer**.
 - ✅ Provides two main functions:
   - **`uploadSingleImage(fieldName)`** → Upload a single image.
   - **`uploadMixOfImages(arrayOfFields)`** → Upload multiple images with different field names.
+- ✅ Provides three roles:
+  - **`admin`** → full access to the system (manage users, data, and permissions).
+  - **`user`** → limited access, can only interact with their own data and perform standard actions.
+  - **`manager`** → extended privileges over user, can oversee and manage groups of users or resources but with fewer rights than admin.
 - ✅ Authentication
    - CURD operations
    - Password confirmation
